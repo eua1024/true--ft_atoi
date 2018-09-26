@@ -1,4 +1,4 @@
-static int ft_isdigit(int c)
+static int ft_is_digit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
@@ -21,7 +21,7 @@ int ft_atoi(char *str)
 		sign = -1;
 	if (*str == '-' || *str == '+')
 		str++;
-	while ((*str != '\0') && ft_isdigit(*str))
+	while ((*str != '\0') && ft_is_digit(*str))
 	{
 		if ((result > 922337203685477580 || (result == 922337203685477580
 			&& (*str - '0') > 7)) && sign == 1)
